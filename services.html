@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dịch vụ - Vietnam Explorer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="/images/umbrella-beach-solid.svg">
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <div class="top-bar-contact">
+          <span>📞 +84 123 456 789</span>
+          <span>✉️ info@vietnamexplorer.com</span>
+        </div>
+        <div class="social-icons">
+          <a href="#">FB</a>
+          <a href="#">IG</a>
+          <a href="#">TW</a>
+          <a href="#">YT</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-header">
+      <div class="logo">   
+        <a href="index.html" class="svg-logo" aria-label="VietnamExplorer"></a>
+        <a href="index.html" class="text-logo">Vietnam<span>Explorer</span></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="about.html">Về Chúng Tôi</a></li>
+          <li><a href="services.html">Dịch Vụ</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Liên Hệ</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="careers.html">Tuyển Dụng</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="login.html" class="btn btn-outline">Đăng Nhập</a>
+        <a href="cart.html" class="btn btn-primary">Giỏ Hàng (0)</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hơn 1000+ tours - Khám phá ngay </h1>
+    </div>
+  </section>
+
+  <!-- Search Box -->
+  <div class="search-box">
+    <form class="search-form">
+      <div class="form-group">
+        <label for="destination">Điểm Đến</label>
+        <select id="destination">
+          <option value="">Chọn điểm đến</option>
+          <option value="ha-noi">Hà Nội</option>
+          <option value="da-nang">Đà Nẵng</option>
+          <option value="hue">Huế</option>
+          <option value="ho-chi-minh">Hồ Chí Minh</option>
+          <option value="phu-quoc">Phú Quốc</option>
+          <option value="nha-trang">Nha Trang</option>
+          <option value="sa-pa">Sa Pa</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="check-in">Ngày Đi</label>
+        <input type="date" id="check-in">
+      </div>
+      <div class="form-group">
+        <label for="check-out">Ngày Về</label>
+        <input type="date" id="check-out">
+      </div>
+      <div class="form-group">
+        <label for="guests">Số Người</label>
+        <select id="guests">
+          <option value="1">1 người</option>
+          <option value="2">2 người</option>
+          <option value="3">3 người</option>
+          <option value="4">4 người</option>
+          <option value="5+">5+ người</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>&nbsp;</label>
+        <button type="submit" class="btn btn-accent" style="width: 100%;">Tìm Tour</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Featured Tours -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Khám Phá Tất Cả Tour Du Lịch</h2>
+        <p>Chọn hành trình lý tưởng cho bạn trong bộ sưu tập tour đa dạng từ biển xanh, núi rừng đến thành phố hoa lệ.</p>
+      </div>
+
+      <div class="tours-grid">
+        <!-- Tour 1 -->
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="images/halongbay1852.jpg" alt="Ha Long Bay">
+          </div>
+          <div class="tour-content">
+            <div class="tour-badge">Biển</div>
+            <h3 class="tour-title">Du lịch Vịnh Hạ Long 3 ngày 2 đêm</h3>
+            <div class="tour-info">
+              <div class="tour-duration">⏱️ 3 ngày 2 đêm</div>
+              <div class="tour-rating">⭐ 4.8/5</div>
+            </div>
+            <p>Khám phá kỳ quan thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi độc đáo...</p>
+            <div class="tour-price">3,500,000đ <span>/ người</span></div>
+            <a href="haLong.html" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Xem Chi Tiết</a>
+          </div>
+        </div>
+
+        <!-- Tour 2 -->
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="images/Tổng-quan-du-lịch-Sapa-ivivu.jpg" alt="Sapa">
+          </div>
+          <div class="tour-content">
+            <div class="tour-badge">Núi</div>
+            <h3 class="tour-title">Trekking Sapa - Bản Cát Cát 2 ngày</h3>
+            <div class="tour-info">
+              <div class="tour-duration">⏱️ 2 ngày 1 đêm</div>
+              <div class="tour-rating">⭐ 4.6/5</div>
+            </div>
+            <p>Chinh phục đỉnh Fansipan và tham quan các bản làng dân tộc với văn hóa độc đáo...</p>
+            <div class="tour-price">2,800,000đ <span>/ người</span></div>
+            <a href="sapa.html" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Xem Chi Tiết</a>
+          </div>
+        </div>
+
+        <!-- Tour 3 -->
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="images/du-lich-hoi-an.jpg" alt="Hoi An">
+          </div>
+          <div class="tour-content">
+            <div class="tour-badge">Phố cổ</div>
+            <h3 class="tour-title">Khám phá Hội An cổ kính 2 ngày</h3>
+            <div class="tour-info">
+              <div class="tour-duration">⏱️ 2 ngày 1 đêm</div>
+              <div class="tour-rating">⭐ 4.7/5</div>
+            </div>
+            <p>Dạo bước trong phố cổ Hội An, tham quan chùa Cầu, thưởng thức ẩm thực đường phố và trải nghiệm làm đèn lồng truyền thống...</p>
+            <div class="tour-price">2,500,000đ <span>/ người</span></div>
+            <a href="hoian.html" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Xem Chi Tiết</a>
+          </div>
+        </div>
+
+        <!-- Tour 4 -->
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="images/dalat.webp" alt="Đà Lạt">
+          </div>
+          <div class="tour-content">
+            <div class="tour-badge">Núi</div>
+            <h3 class="tour-title">Du lịch Đà Lạt 3 ngày 2 đêm</h3>
+            <div class="tour-info">
+              <div class="tour-duration">⏱️ 3 ngày 2 đêm</div>
+              <div class="tour-rating">⭐ 4.7/5</div>
+            </div>
+            <p>Trải nghiệm không khí se lạnh, check-in vườn hoa, thung lũng tình yêu và các quán cà phê view rừng thông...</p>
+            <div class="tour-price">2,900,000đ <span>/ người</span></div>
+            <a href="dalat.html" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Xem Chi Tiết</a>
+          </div>
+        </div>
+
+        <!-- Tour 5 -->
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="images/du-lich-phu-quoc.webp" alt="Phú Quốc">
+          </div>
+          <div class="tour-content">
+            <div class="tour-badge">Biển</div>
+            <h3 class="tour-title">Du lịch Phú Quốc 4 ngày 3 đêm</h3>
+            <div class="tour-info">
+              <div class="tour-duration">⏱️ 4 ngày 3 đêm</div>
+              <div class="tour-rating">⭐ 4.9/5</div>
+            </div>
+            <p>Thư giãn tại các bãi biển tuyệt đẹp, lặn ngắm san hô, khám phá VinWonders và chợ đêm Phú Quốc...</p>
+            <div class="tour-price">4,200,000đ <span>/ người</span></div>
+            <a href="phuquoc.html" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Xem Chi Tiết</a>
+          </div>
+        </div>
+
+        <!-- Tour 6 -->
+        <div class="tour-card">
+          <div class="tour-img">
+            <img src="images/mui-ne-3.jpg" alt="Mũi Né">
+          </div>
+          <div class="tour-content">
+            <div class="tour-badge">Biển</div>
+            <h3 class="tour-title">Du lịch Mũi Né 2 ngày 1 đêm</h3>
+            <div class="tour-info">
+              <div class="tour-duration">⏱️ 2 ngày 1 đêm</div>
+              <div class="tour-rating">⭐ 4.6/5</div>
+            </div>
+            <p>Khám phá đồi cát bay, làng chài Mũi Né, tắm biển và thưởng thức hải sản tươi sống ngay tại bờ biển...</p>
+            <div class="tour-price">1,800,000đ <span>/ người</span></div>
+            <a href="muine.html" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Xem Chi Tiết</a>
+          </div>
+        </div>
+      </div>
+      <div class="more">
+        <a href="#" class="btn btn-outline">Xem Thêm </a>
+      </div> 
+     </div>
+  </section>
+
+ <!-- footer -->
+ <footer>
+  <div class="footer-content">
+     <!-- About Column -->
+    <div class="footer-column footer-about">
+      <h3>VietnamExplorer</h3>
+      <p>Chúng tôi mang đến những trải nghiệm du lịch độc đáo khắp mọi miền đất nước Việt Nam. Khám phá vẻ đẹp tự nhiên, văn hóa đặc sắc và ẩm thực phong phú cùng các chuyên gia du lịch của chúng tôi.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Twitter">TW</a>
+        <a href="#" aria-label="Youtube">YT</a>
+      </div>
+    </div>
+    <!-- Quick Links Column -->
+     <div class="footer-column footer-links">
+      <h3>Điểm đến phổ biến</h3>
+      <ul>
+        <li><a href="#">Hạ Long</a></li>
+        <li><a href="#">Sapa</a></li>
+        <li><a href="#">Hội An</a></li>
+        <li><a href="#">Đà Lạt</a></li>
+        <li><a href="#">Phú Quốc</a></li>
+        <li><a href="#">Mũi Né</a></li>
+      </ul>
+     </div>
+    <!-- Contact Column -->
+    <div class="footer-column footer-contact">
+      <h3>Liên hệ</h3>
+      <p>
+          <span>📍</span>
+          123 Hai Bà Trưng, Hà Nội 
+      </p>
+      <p>
+          <span>📞</span>
+          +84 123 456 789
+      </p>
+      <p>
+          <span>✉️</span>
+          info@vietnamexplorer.com
+      </p>
+      <p>
+          <span>⏰</span>
+          Thứ 2 - Thứ 7: 8:00 - 18:00
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 VietnamExplorer. Tất cả quyền được bảo lưu.</p>
+</div>
+</footer>

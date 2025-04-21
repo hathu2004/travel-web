@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng - Vietnam Explorer</title>
+  <link rel="icon" type="image/x-icon" href="/images/umbrella-beach-solid.svg">
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <div class="top-bar-contact">
+          <span>📞 +84 123 456 789</span>
+          <span>✉️ info@vietnamexplorer.com</span>
+        </div>
+        <div class="social-icons">
+          <a href="#">FB</a>
+          <a href="#">IG</a>
+          <a href="#">TW</a>
+          <a href="#">YT</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-header">
+      <div class="logo">   
+        <a href="index.html" class="svg-logo" aria-label="VietnamExplorer"></a>
+        <a href="index.html" class="text-logo">Vietnam<span>Explorer</span></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="about.html">Về Chúng Tôi</a></li>
+          <li><a href="services.html">Dịch Vụ</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Liên Hệ</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="careers.html">Tuyển Dụng</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a href="login.html" class="btn btn-outline">Đăng Nhập</a>
+        <a href="cart.html" class="btn btn-primary">Giỏ Hàng (2)</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Giỏ Hàng</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Trang Chủ</a>
+        <span class="separator">></span>
+        <span>Giỏ Hàng</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <div class="container">
+      <div class="cart-container">
+        <div class="cart-items">
+          <h2 class="cart-title">Tour Đã Chọn (2)</h2>
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th>Tour</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Tổng cộng</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Tour 1 -->
+              <tr>
+                <td data-label="Tour">
+                  <div class="cart-tour">
+                    <div class="cart-tour-image">
+                      <img src="/api/placeholder/200/150" alt="Ha Long Bay">
+                    </div>
+                    <div class="cart-tour-info">
+                      <h3 class="cart-tour-title">Du lịch Vịnh Hạ Long 3 ngày 2 đêm</h3>
+                      <div class="cart-tour-details">
+                        Ngày đi: 20/05/2025<br>
+                        Điểm xuất phát: Hà Nội
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Giá" class="cart-price">3,500,000đ</td>
+                <td data-label="Số lượng">
+                  <div class="cart-quantity">
+                    <div class="quantity-btn minus">-</div>
+                    <input type="text" class="quantity-input" value="2" readonly>
+                    <div class="quantity-btn plus">+</div>
+                  </div>
+                </td>
+                <td data-label="Tổng cộng" class="cart-subtotal">7,000,000đ</td>
+                <td data-label="Xóa">
+                  <div class="cart-remove">✖</div>
+                </td>
+              </tr>
+              
+              <!-- Tour 2 -->
+              <tr>
+                <td data-label="Tour">
+                  <div class="cart-tour">
+                    <div class="cart-tour-image">
+                      <img src="/api/placeholder/200/150" alt="Sapa">
+                    </div>
+                    <div class="cart-tour-info">
+                      <h3 class="cart-tour-title">Trekking Sapa - Bản Cát Cát 2 ngày</h3>
+                      <div class="cart-tour-details">
+                        Ngày đi: 15/06/2025<br>
+                        Điểm xuất phát: Hà Nội
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Giá" class="cart-price">2,800,000đ</td>
+                <td data-label="Số lượng">
+                  <div class="cart-quantity">
+                    <div class="quantity-btn minus">-</div>
+                    <input type="text" class="quantity-input" value="1" readonly>
+                    <div class="quantity-btn plus">+</div>
+                  </div>
+                </td>
+                <td data-label="Tổng cộng" class="cart-subtotal">2,800,000đ</td>
+                <td data-label="Xóa">
+                  <div class="cart-remove">✖</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="cart-actions">
+            <a href="services.html" class="continue-shopping">← <span>Tiếp tục mua sắm</span></a>
+            <button class="update-cart">Cập nhật giỏ hàng</button>
+          </div>
+        </div>
+        
+        <div class="cart-summary">
+          <h3 class="summary-title">Tổng Thanh Toán</h3>
+          <div class="summary-row">
+            <div class="summary-label">Tạm tính</div>
+            <div class="summary-value">9,800,000đ</div>
+          </div>
+          <div class="summary-row">
+            <div class="summary-label">Thuế VAT (10%)</div>
+            <div class="summary-value">980,000đ</div>
+          </div>
+          <div class="summary-row">
+            <div class="summary-label">Giảm giá</div>
+            <div class="summary-value">-500,000đ</div>
+          </div>
+          <div class="summary-row total">
+            <div class="summary-label">Tổng thanh toán</div>
+            <div class="summary-value">10,280,000đ</div>
+          </div>
+          
+          <div class="coupon-input">
+            <input type="text" placeholder="Mã giảm giá">
+            <button>Áp dụng</button>
+          </div>
+          
+          <button class="btn btn-accent checkout-btn">Tiến hành thanh toán</button>
+        </div>
+      </div>
+      
+      <!-- Empty Cart Template (hidden by default) -->
+      <div class="empty-cart" style="display: none;">
+        <div class="empty-cart-icon">🛒</div>
+        <h2>Giỏ hàng của bạn đang trống</h2>
+        <p>Bạn chưa thêm tour nào vào giỏ hàng. Hãy khám phá các tour du lịch của chúng tôi!</p>
+        <a href="services.html" class="btn btn-primary">Khám phá tour</a>
+      </div>
+    </div>
+  </section>
+
+  
