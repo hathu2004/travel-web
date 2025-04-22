@@ -123,8 +123,18 @@
  }
 
  .header-cta a {
-   margin-left: 15px;
-   text-decoration: none;
+  margin-left: 15px;
+  text-decoration: none;
+ }
+
+ #auth-section {
+   display: flex;
+   align-items: center;
+ }
+
+ #auth-section a {
+    margin-left: 15px;
+    text-decoration: none;
  }
 
  .btn {
