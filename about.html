@@ -4,9 +4,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Về Chúng Tôi - Vietnam Explorer</title>
   <link rel="icon" type="image/x-icon" href="/images/umbrella-beach-solid.svg">
-  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="../mystyle.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="top-bar">
       <div class="top-bar-content">
@@ -23,14 +24,14 @@
       </div>
     </div>
     <div class="main-header">
-      <div class="logo">
+      <div class="logo">   
         <a href="index.html" class="svg-logo" aria-label="VietnamExplorer"></a>
         <a href="index.html" class="text-logo">Vietnam<span>Explorer</span></a>
       </div>
       <nav>
         <ul>
           <li><a href="index.html">Trang Chủ</a></li>
-          <li><a href="about.html" class="active">Về Chúng Tôi</a></li>
+          <li><a href="about.html">Về Chúng Tôi</a></li>
           <li><a href="services.html">Dịch Vụ</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Liên Hệ</a></li>
@@ -38,96 +39,107 @@
           <li><a href="careers.html">Tuyển Dụng</a></li>
         </ul>
       </nav>
+      <!-- Phần này sẽ thay đổi dựa vào trạng thái đăng nhập -->
       <div id="auth-section">
+        <!-- JavaScript sẽ điền nội dung vào đây -->
       </div>
     </div>
   </header>
 
-  <section class="section about-section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Về Vietnam Explorer</h2>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Về Vietnam Explorer</h1>
         <p>Chúng tôi mang đến trải nghiệm du lịch đáng nhớ khắp Việt Nam.</p>
+        <a href="services.html" class="btn btn-accent">Khám Phá Ngay</a>
       </div>
-      <div class="about-content">
-        <h3>Lịch sử hình thành</h3>
+    </section>
+
+  <section class="about-section">
+    <div class="container about-content">
+      <div class="about-text">
+        
+        <h2>Lịch sử hình thành</h2>
         <p>Vietnam Explorer được thành lập vào năm 2015 với sứ mệnh mang vẻ đẹp và văn hoá phong phú của Việt Nam tới du khách trong và ngoài nước. Trong suốt hơn 10 năm qua, chúng tôi đã phát triển mạng lưới trải nghiệm đến hàng chục điểm đến nổi tiếng.</p>
-        <h3>Sứ mệnh</h3>
+        
+        <h2>Sứ mệnh</h2>
         <p>Chúng tôi cam kết cung cấp dịch vụ du lịch an toàn, chất lượng và tận tâm, tạo nên những kỷ niệm khó quên cho mỗi hành trình.</p>
-        <h3>Giá trị cốt lõi</h3>
-        <ul>
-          <li><strong>Chất lượng:</strong> Luôn đặt tiêu chuẩn cao nhất cho dịch vụ.</li>
-          <li><strong>Uy tín:</strong> Minh bạch và đáng tin cậy trong mọi giao dịch.</li>
-          <li><strong>Sáng tạo:</strong> Liên tục đổi mới trải nghiệm du lịch.</li>
-          <li><strong>Trách nhiệm:</strong> Bảo vệ môi trường và hỗ trợ cộng đồng địa phương.</li>
-        </ul>
-        <h3>Đội ngũ nhân viên</h3>
-        <div class="team-grid">
-          <div class="team-member">
-            <img src="images/team1.jpg" alt="Ông">
-            <h4>Phạm Hùng Dương</h4>
-            <p>Giám đốc điều hành</p>
+        
+        <h2>Giá trị cốt lõi</h2>
+        <p><strong>Chất lượng:</strong> Luôn đặt tiêu chuẩn cao nhất cho dịch vụ.</p>
+        <p><strong>Uy tín:</strong> Minh bạch và đáng tin cậy trong mọi giao dịch.</p>
+        <p><strong>Sáng tạo:</strong> Liên tục đổi mới trải nghiệm du lịch.</p>
+        <p><strong>Trách nhiệm:</strong> Bảo vệ môi trường và hỗ trợ cộng đồng địa phương.</p>
+  
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Năm kinh nghiệm</div>
           </div>
-          <div class="team-member">
-            <img src="images/team2.jpg" alt="Bà">
-            <h4>Phạm Thị Hà Thư</h4>
-            <p>Trưởng phòng Sản phẩm</p>
+          <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Điểm đến</div>
           </div>
-          <div class="team-member">
-            <img src="images/team3.jpg" alt="Ông">
-            <h4>Phạm Minh</h4>
-            <p>Giám đốc Tiếp thị</p>
-          </div>
-          <div class="team-member">
-            <img src="images/team4.jpg" alt="Ông">
-            <h4>Bùi Văn Dũng</h4>
-            <p>Trưởng phòng Chăm sóc khách hàng</p>
-          <div class="team-member">
-            <img src="images/team4.jpg" alt="Ông">
-            <h4>Tài Đức</h4>
-            <p>Trưởng phòng Kế toán</p>
+          <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Hài lòng</div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-column footer-about">
-        <h3>VietnamExplorer</h3>
-        <p>Kết nối hành trình, lan tỏa giá trị.</p>
-        <div class="footer-social">
-          <a href="#">FB</a>
-          <a href="#">IG</a>
-          <a href="#">TW</a>
-          <a href="#">YT</a>
-        </div>
-      </div>
-      <div class="footer-column footer-links">
-        <h3>Điểm đến phổ biến</h3>
-        <ul>
-          <li><a href="#">Hạ Long</a></li>
-          <li><a href="#">Sapa</a></li>
-          <li><a href="#">Hội An</a></li>
-          <li><a href="#">Đà Lạt</a></li>
-          <li><a href="#">Phú Quốc</a></li>
-          <li><a href="#">Mũi Né</a></li>
-        </ul>
-      </div>
-      <div class="footer-column footer-contact">
-        <h3>Liên hệ</h3>
-        <p><span>📍</span> 123 Hai Bà Trưng, Hà Nội</p>
-        <p><span>📞</span> +84 123 456 789</p>
-        <p><span>✉️</span> info@vietnamexplorer.com</p>
-        <p><span>⏰</span> Thứ 2 - Thứ 7: 8:00 - 18:00</p>
+  
+ <!-- footer -->
+ <footer>
+  <div class="footer-content">
+     <!-- About Column -->
+    <div class="footer-column footer-about">
+      <h3>VietnamExplorer</h3>
+      <p>Chúng tôi mang đến những trải nghiệm du lịch độc đáo khắp mọi miền đất nước Việt Nam. Khám phá vẻ đẹp tự nhiên, văn hóa đặc sắc và ẩm thực phong phú cùng các chuyên gia du lịch của chúng tôi.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Twitter">TW</a>
+        <a href="#" aria-label="Youtube">YT</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 VietnamExplorer. Tất cả quyền được bảo lưu.</p>
+    <!-- Quick Links Column -->
+     <div class="footer-column footer-links">
+      <h3>Điểm đến phổ biến</h3>
+      <ul>
+        <li><a href="#">Hạ Long</a></li>
+        <li><a href="#">Sapa</a></li>
+        <li><a href="#">Hội An</a></li>
+        <li><a href="#">Đà Lạt</a></li>
+        <li><a href="#">Phú Quốc</a></li>
+        <li><a href="#">Mũi Né</a></li>
+      </ul>
+     </div>
+    <!-- Contact Column -->
+    <div class="footer-column footer-contact">
+      <h3>Liên hệ</h3>
+      <p>
+          <span>📍</span>
+          123 Hai Bà Trưng, Hà Nội 
+      </p>
+      <p>
+          <span>📞</span>
+          +84 123 456 789
+      </p>
+      <p>
+          <span>✉️</span>
+          info@vietnamexplorer.com
+      </p>
+      <p>
+          <span>⏰</span>
+          Thứ 2 - Thứ 7: 8:00 - 18:00
+      </p>
     </div>
-  </footer>
-
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 VietnamExplorer. Tất cả quyền được bảo lưu.</p>
+</div>
+</footer>
+<script src="js/auth.js"></script>
 </body>
 </html>

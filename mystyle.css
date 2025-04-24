@@ -760,11 +760,17 @@
  }
 
  /* About Section */
+ 
  .about-content {
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr;
    gap: 50px;
    align-items: center;
+   padding: 40px 150px;
+   text-align: center;
+   border-radius: 8px;
+   box-shadow: 0 5px 15px rgba(7, 7, 7, 0.05);
+   margin: 20px auto;
  }
 
  .about-image {
@@ -782,7 +788,8 @@
  .about-text h2 {
    font-size: 2rem;
    margin-bottom: 20px;
-   color: var(--dark-color);
+   color: var(--primary-color);
+  
  }
 
  .about-text p {
@@ -1148,21 +1155,24 @@
  }
 
  .footer-social a {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 40px;
-   height: 40px;
-   background-color: rgba(255, 255, 255, 0.1);
-   color: white;
-   border-radius: 50%;
-   margin-right: 10px;
-   transition: background-color 0.3s;
-   text-decoration: none;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  
+  /* Flexbox để căn giữa */
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center;    /* Căn giữa theo chiều dọc */
  }
 
  .footer-social a:hover {
    background-color: var(--accent-color);
+   color: white;
  }
 
  .footer-bottom {
@@ -1402,17 +1412,6 @@
   margin-bottom: 16px;
 }
 
-.footer-column a {
-  display: block;
-  color: #555;
-  margin-bottom: 10px;
-  text-decoration: none;
-}
-
-.footer-column a:hover {
-  color: #000;
-}
-
 .footer-bottom {
   text-align: center;
   padding-top: 30px;
@@ -1580,6 +1579,7 @@
 .job {
   padding: 16px 0;
   cursor: pointer;
+  margin-top: 30px;
 }
 .job {
   display: flex;

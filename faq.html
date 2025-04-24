@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FAQ</title>
   <link rel="stylesheet" href="mystyle.css" />
-  <link rel="icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.V5aDSP3nFRQUiJWgDhDJ8AHaHa?rs=1&pid=ImgDetMain">
-
-
+  <link rel="icon" type="image/x-icon" href="/images/umbrella-beach-solid.svg">
 </head>
 <body>
 
@@ -43,9 +41,9 @@
           <li><a href="careers.html">Tuyển Dụng</a></li>
         </ul>
       </nav>
-      <div class="header-cta">
-        <a href="login.html" class="btn btn-outline">Đăng Nhập</a>
-        <a href="cart.html" class="btn btn-primary">Giỏ Hàng (0)</a>
+      <!-- Phần này sẽ thay đổi dựa vào trạng thái đăng nhập -->
+      <div id="auth-section">
+        <!-- JavaScript sẽ điền nội dung vào đây -->
       </div>
     </div>
   </header>
@@ -230,15 +228,7 @@
           </form>
           
 
-        <!-- Contact Info -->
-            <div class="contact-info">
-                <p><strong>Chat to sales</strong><br>sales@vietnamexplorer.com</p>
-                <p><strong>Email support</strong><br>support@vietnamexplorer.com</p>
-                <p><strong>Call us</strong><br>+84 123 456 789</p>
-                <p><strong>Visit us</strong><br>10 Duy Tân Street, Hanoi</p>
-            </div>
-        </div>
-
+       
         <!-- Testimonial -->
         <div class="testimonial">
             <div class="testimonial-text">
@@ -248,13 +238,7 @@
         <div class="testimonial-image" style="background-image: url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=600&q=80');"></div>
         </div>
 
-        <!-- Brand Logos -->
-        <div class="brands">
-        <p>Trusted by 1 million+ users</p>
-        <img src="https://th.bing.com/th/id/OIP.2-35M53EpK9iazNeGvuRCgHaHW?rs=1&pid=ImgDetMain" alt="Basecamp" height="30">
-        <img src="https://th.bing.com/th/id/OIP.IAPhw1w4z67W9fLxhxre-AHaHZ?rs=1&pid=ImgDetMain" alt="Uber" height="30">
-        <img src="https://logodix.com/logo/1792058.png" alt="Notion" height="30">
-        </div>
+       
     </div>
 
     </div>
@@ -312,6 +296,7 @@
       <p>&copy; 2025 VietnamExplorer. Tất cả quyền được bảo lưu.</p>
   </div>
   </footer>
-  <script src="faq.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/auth.js"></script>
 </body>
 </html>
