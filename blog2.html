@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Du Lịch</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page-title {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .page-title h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #0066cc;
+        }
+        
+        .page-title p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .search-bar {
+            margin-bottom: 30px;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .category-btn {
+            padding: 8px 16px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.05);
+        }
+        
+        .blog-content {
+            padding: 20px;
+        }
+        
+        .blog-date {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .blog-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #222;
+        }
+        
+        .blog-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+        .read-more {
+            display: inline-block;
+            color: #0066cc;
+            font-weight: 500;
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .read-more:after {
+            content: "→";
+            margin-left: 5px;
+            transition: margin 0.3s;
+        }
+        
+        .read-more:hover:after {
+            margin-left: 10px;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .pagination a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .pagination a:hover, .pagination a.active {
+            background-color: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+        
+        .featured-post {
+            margin-bottom: 40px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .featured-image {
+            height: 100%;
+        }
+        
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .featured-content {
+            padding: 30px;
+        }
+        
+        .featured-label {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .featured-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        
+        .featured-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+  <header>
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <div class="top-bar-contact">
+          <span>📞 +84 123 456 789</span>
+          <span>✉️ info@vietnamexplorer.com</span>
+        </div>
+        <div class="social-icons">
+          <a href="#">FB</a>
+          <a href="#">IG</a>
+          <a href="#">TW</a>
+          <a href="#">YT</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-header">
+      <div class="logo">   
+        <a href="index.html" class="svg-logo" aria-label="VietnamExplorer"></a>
+        <a href="index.html" class="text-logo">Vietnam<span>Explorer</span></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="about.html">Về Chúng Tôi</a></li>
+          <li><a href="services.html">Dịch Vụ</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Liên Hệ</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="careers.html">Tuyển Dụng</a></li>
+        </ul>
+      </nav>
+      <!-- Phần này sẽ thay đổi dựa vào trạng thái đăng nhập -->
+      <div id="auth-section">
+        <!-- JavaScript sẽ điền nội dung vào đây -->
+      </div>
+    </div>
+  </header>
+    <main class="container">
+        <section class="page-title">
+            <h2>Blog Du Lịch</h2>
+            <p>Khám phá những trải nghiệm, chia sẻ và kinh nghiệm du lịch hữu ích</p>
+        </section>
+
+        <section class="search-bar">
+            <input type="text" placeholder="Tìm kiếm bài viết...">
+        </section>
+
+        <section class="category-filter">
+            <button class="category-btn active">Tất Cả</button>
+            <button class="category-btn">Kinh Nghiệm Du Lịch</button>
+            <button class="category-btn">Ẩm Thực</button>
+            <button class="category-btn">Văn Hóa</button>
+            <button class="category-btn">Điểm Đến Hot</button>
+            <button class="category-btn">Mẹo Du Lịch</button>
+        </section>
+
+        <section class="featured-post">
+            <div class="featured-image">
+                <img src="images/dulich2025.jpg" alt="Bài viết nổi bật">
+            </div>
+            <div class="featured-content">
+                <span class="featured-label">Nổi Bật</span>
+                <h3 class="featured-title">10 Điểm Đến Không Thể Bỏ Qua Khi Du Lịch Việt Nam Mùa Hè 2025</h3>
+                <p class="blog-date">15 tháng 4, 2025</p>
+                <p class="featured-description">Mùa hè đã đến, đây là thời điểm lý tưởng để khám phá những địa điểm tuyệt vời tại Việt Nam. Từ những bãi biển tuyệt đẹp ở miền Trung đến những dãy núi hùng vĩ ở phía Bắc, chúng tôi đã tổng hợp 10 điểm đến bạn không nên bỏ lỡ trong mùa hè này.</p>
+                <a href="#blog-grid" class="read-more">Đọc tiếp</a>
+            </div>
+        </section>
+
+        <section class="blog-grid" id="blog-grid">
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="images/vinh_ha_long.jpg" alt="Vịnh Hạ Long">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">12 tháng 4, 2025</p>
+                    <h3 class="blog-title">Du Thuyền 2 Ngày 1 Đêm Trên Vịnh Hạ Long - Trải Nghiệm Đáng Nhớ</h3>
+                    <p class="blog-description">Chia sẻ kinh nghiệm đặt tour du thuyền sang trọng khám phá Vịnh Hạ Long, ngắm bình minh trên vịnh và tham quan các hang động kỳ vĩ.</p>
+                    <a href="blog2_vinhhalong.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="images/hue.jpg" alt="Cố đô Huế">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">9 tháng 4, 2025</p>
+                    <h3 class="blog-title">Hành Trình Khám Phá Di Sản Văn Hóa Thế Giới Tại Huế</h3>
+                    <p class="blog-description">Hướng dẫn chi tiết lịch trình tham quan Đại Nội, lăng tẩm các vua Nguyễn và thưởng thức ẩm thực cung đình độc đáo của xứ Huế.</p>
+                    <a href="blog2_hue.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="images/cho_noi_cai_rang.jpg" alt="Miền Tây sông nước">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">6 tháng 4, 2025</p>
+                    <h3 class="blog-title">Tour Chợ Nổi Cái Răng - Trải Nghiệm Văn Hóa Sông Nước Miền Tây</h3>
+                    <p class="blog-description">Khám phá nét độc đáo của chợ nổi Cái Răng - nét văn hóa đặc trưng vùng sông nước miền Tây Nam Bộ và những món ngon không thể bỏ qua.</p>
+                    <a href="blog2_chocairang.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="images/cau_vang_da_nang.jpg" alt="Cầu Vàng Đà Nẵng">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">3 tháng 4, 2025</p>
+                    <h3 class="blog-title">Cầu Vàng Đà Nẵng - Kiến Trúc Độc Đáo Giữa Lưng Chừng Núi</h3>
+                    <p class="blog-description">Tất tần tật kinh nghiệm tham quan Cầu Vàng - biểu tượng du lịch mới của Đà Nẵng, từ cách di chuyển đến góc chụp ảnh đẹp nhất.</p>
+                    <a href="blog2_cauvang.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </article>
+        </section>
+
+        <div class="pagination">
+            <a href="blog.html">Trước</a>
+            <a href="blog.html">1</a>
+            <a href="#" class="active">2</a>
+        </div>
+    </main>
+</body>
+</html>

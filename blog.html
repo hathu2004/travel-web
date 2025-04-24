@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Du Lịch</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page-title {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .page-title h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #0066cc;
+        }
+        
+        .page-title p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .search-bar {
+            margin-bottom: 30px;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .category-btn {
+            padding: 8px 16px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.05);
+        }
+        
+        .blog-content {
+            padding: 20px;
+        }
+        
+        .blog-date {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .blog-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #222;
+        }
+        
+        .blog-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+        .read-more {
+            display: inline-block;
+            color: #0066cc;
+            font-weight: 500;
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .read-more:after {
+            content: "→";
+            margin-left: 5px;
+            transition: margin 0.3s;
+        }
+        
+        .read-more:hover:after {
+            margin-left: 10px;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .pagination a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .pagination a:hover, .pagination a.active {
+            background-color: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+        
+        .featured-post {
+            margin-bottom: 40px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .featured-image {
+            height: 100%;
+        }
+        
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .featured-content {
+            padding: 30px;
+        }
+        
+        .featured-label {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .featured-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        
+        .featured-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+  <header>
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <div class="top-bar-contact">
+          <span>📞 +84 123 456 789</span>
+          <span>✉️ info@vietnamexplorer.com</span>
+        </div>
+        <div class="social-icons">
+          <a href="#">FB</a>
+          <a href="#">IG</a>
+          <a href="#">TW</a>
+          <a href="#">YT</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-header">
+      <div class="logo">   
+        <a href="index.html" class="svg-logo" aria-label="VietnamExplorer"></a>
+        <a href="index.html" class="text-logo">Vietnam<span>Explorer</span></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="about.html">Về Chúng Tôi</a></li>
+          <li><a href="services.html">Dịch Vụ</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Liên Hệ</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="careers.html">Tuyển Dụng</a></li>
+        </ul>
+      </nav>
+      <!-- Phần này sẽ thay đổi dựa vào trạng thái đăng nhập -->
+      <div id="auth-section">
+        <!-- JavaScript sẽ điền nội dung vào đây -->
+      </div>
+    </div>
+  </header>
+    <main class="container">
+        <section class="page-title">
+            <h2>Blog Du Lịch</h2>
+            <p>Khám phá những trải nghiệm, chia sẻ và kinh nghiệm du lịch hữu ích</p>
+        </section>
+
+        <section class="search-bar">
+            <input type="text" placeholder="Tìm kiếm bài viết...">
+        </section>
+
+        <section class="category-filter">
+            <button class="category-btn active">Tất Cả</button>
+            <button class="category-btn">Kinh Nghiệm Du Lịch</button>
+            <button class="category-btn">Ẩm Thực</button>
+            <button class="category-btn">Văn Hóa</button>
+            <button class="category-btn">Điểm Đến Hot</button>
+            <button class="category-btn">Mẹo Du Lịch</button>
+        </section>
+
+        <section class="featured-post">
+            <div class="featured-image">
+                <img src="images/dulich2025.jpg" alt="Bài viết nổi bật">
+            </div>
+            <div class="featured-content">
+                <span class="featured-label">Nổi Bật</span>
+                <h3 class="featured-title">10 Điểm Đến Không Thể Bỏ Qua Khi Du Lịch Việt Nam Mùa Hè 2025</h3>
+                <p class="blog-date">15 tháng 4, 2025</p>
+                <p class="featured-description">Mùa hè đã đến, đây là thời điểm lý tưởng để khám phá những địa điểm tuyệt vời tại Việt Nam. Từ những bãi biển tuyệt đẹp ở miền Trung đến những dãy núi hùng vĩ ở phía Bắc, chúng tôi đã tổng hợp 10 điểm đến bạn không nên bỏ lỡ trong mùa hè này.</p>
+                <a href="#blog-grid" class="read-more">Đọc tiếp</a>
+            </div>
+        </section>
+
+        <section class="blog-grid" id="blog-grid">
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="images/dalat.webp" alt="Đà Lạt mùa hoa">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">10 tháng 4, 2025</p>
+                    <h3 class="blog-title">Đà Lạt - Thiên Đường Hoa Trong Mùa Xuân</h3>
+                    <p class="blog-description">Khám phá vẻ đẹp của thành phố ngàn hoa với những vườn hoa đầy màu sắc và khí hậu mát mẻ dễ chịu vào mùa xuân.</p>
+                    <a href="blog_dalat.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="images/du-lich-hoi-an.jpg" alt="Ẩm thực Hội An">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">8 tháng 4, 2025</p>
+                    <h3 class="blog-title">Khám Phá 7 Món Ăn Không Thể Bỏ Lỡ Khi Đến Hội An</h3>
+                    <p class="blog-description">Hội An không chỉ nổi tiếng với phố cổ đẹp mê hoặc mà còn có nền ẩm thực đặc sắc với nhiều món ăn độc đáo.</p>
+                    <a href="blog_hoian.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="images/sapa.jpg" alt="Sapa">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">5 tháng 4, 2025</p>
+                    <h3 class="blog-title">Trải Nghiệm Homestay Cùng Người Dân Tộc Tại Sapa</h3>
+                    <p class="blog-description">Chia sẻ những trải nghiệm thú vị khi lưu trú tại các homestay của người dân tộc H'Mông và Dao tại Sapa.</p>
+                    <a href="blog_sapa.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="images/du-lich-phu-quoc.webp" alt="Phú Quốc">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">1 tháng 4, 2025</p>
+                    <h3 class="blog-title">Lịch Trình 4 Ngày 3 Đêm Tại Đảo Ngọc Phú Quốc</h3>
+                    <p class="blog-description">Gợi ý lịch trình chi tiết để khám phá hết vẻ đẹp của đảo ngọc Phú Quốc trong chuyến du lịch ngắn ngày.</p>
+                    <a href="blog_phuquoc.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="images/mapileng.jpg" alt="Hà Giang">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">28 tháng 3, 2025</p>
+                    <h3 class="blog-title">Chinh Phục Đèo Mã Pí Lèng - Cung Đường Đẹp Nhất Hà Giang</h3>
+                    <p class="blog-description">Những kinh nghiệm và lưu ý khi đi xe máy chinh phục cung đường đèo hiểm trở nhưng tuyệt đẹp tại Hà Giang.</p>
+                    <a href="blog_hagiang.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="images/bien_nha_trang.webp" alt="Nha Trang">
+                </div>
+                <div class="blog-content">
+                    <p class="blog-date">25 tháng 3, 2025</p>
+                    <h3 class="blog-title">Top 5 Bãi Biển Đẹp Nhất Nha Trang Dành Cho Mùa Hè</h3>
+                    <p class="blog-description">Giới thiệu những bãi biển đẹp nhất tại Nha Trang với làn nước trong xanh và bờ cát trắng mịn cho mùa hè này.</p>
+                    <a href="blog_nhatrang.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </article>
+        </section>
+
+        <div class="pagination">
+            <a href="blog.html" class="active">1</a>
+            <a href="blog2.html">2</a>
+            <a href="blog2.html">Tiếp →</a>
+        </div>
+    </main>
+</body>
+</html>
