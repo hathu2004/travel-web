@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chi tiết Tour - Vịnh Hạ Long</title>
-  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="../mystyle.css">
   <link rel="icon" type="image/x-icon" href="/images/umbrella-beach-solid.svg">
 </head>
 <body>
@@ -40,9 +40,8 @@
          <li><a href="careers.html">Tuyển Dụng</a></li>
        </ul>
      </nav>
-     <div class="header-cta">
-       <a href="login.html" class="btn btn-outline">Đăng Nhập</a>
-       <a href="cart.html" class="btn btn-primary">Giỏ Hàng (0)</a>
+     <div id="auth-section">
+      <!-- JavaScript sẽ điền nội dung vào đây -->
      </div>
    </div>
  </header>
@@ -57,7 +56,7 @@
  
      <div class="tour-detail-main">
        <div class="tour-detail-image">
-         <img src="images/du-lich-phu-quoc.webp" alt="Phú Quốc">
+         <img src="../images/du-lich-phu-quoc.webp" alt="Phú Quốc">
        </div>
  
        <div class="tour-detail-content">
@@ -77,8 +76,9 @@
            </p>
          </div>
  
-         <div class="tour-detail-buttons">
-           <button class="btn btn-outline">Thêm vào giỏ hàng</button>
+         <div id="tour-data" data-id="5" data-name="Du lịch Phú Quốc 4 ngày 3 đêm" data-price="4200000" hidden></div>
+         <div id ="tour-detail-buttons">
+           <!-- JavaScript sẽ điền nội dung vào đây -->
          </div>
        </div>
      </div>
@@ -144,5 +144,7 @@
      <p>&copy; 2025 VietnamExplorer. Tất cả quyền được bảo lưu.</p>
  </div>
  </footer>
+ <script src="../js/authservice.js"></script>
+ <script src="../js/services.js"></script>
 </body>
 </html>

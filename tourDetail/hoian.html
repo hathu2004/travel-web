@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chi tiết Tour - Vịnh Hạ Long</title>
-  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="../mystyle.css">
   <link rel="icon" type="image/x-icon" href="/images/umbrella-beach-solid.svg">
 </head>
 <body>
@@ -40,9 +40,8 @@
          <li><a href="careers.html">Tuyển Dụng</a></li>
        </ul>
      </nav>
-     <div class="header-cta">
-       <a href="login.html" class="btn btn-outline">Đăng Nhập</a>
-       <a href="cart.html" class="btn btn-primary">Giỏ Hàng (0)</a>
+     <div id="auth-section">
+      <!-- JavaScript sẽ điền nội dung vào đây -->
      </div>
    </div>
  </header>
@@ -51,43 +50,44 @@
   <section class="section">
    <div class="container">
      <div class="tour-detail-header">
-       <h1>Du lịch Mũi Né 2 ngày 1 đêm</h1>
-       <p>⭐ 4.6/5 (87 đánh giá)</p>
+       <h1>Khám phá Hội An cổ kính 2 ngày</h1>
+       <p>⭐ 4.7/5 (145 đánh giá)</p>
      </div>
  
      <div class="tour-detail-main">
        <div class="tour-detail-image">
-         <img src="images/mui-ne-3.jpg" alt="Mũi Né">
+         <img src="../images/du-lich-hoi-an.jpg" alt="Hoi An">
        </div>
  
        <div class="tour-detail-content">
          <div class="tour-detail-info">
-           <p><strong>⏱️ Thời gian:</strong> 2 ngày 1 đêm</p>
-           <p><strong>📍 Khởi hành:</strong> TP.HCM</p>
-           <p><strong>🧭 Lịch trình:</strong> TP.HCM - Mũi Né - Đồi cát bay - Suối Tiên - Làng chài</p>
-           <p><strong>💰 Giá:</strong> <span class="tour-detail-price">1,800,000đ</span> / người</p>
+           <p><strong>⏱️ Thời gian:</strong> ⏱️ 2 ngày 1 đêm</p>
+           <p><strong>📍 Khởi hành:</strong> Đà Nẵng</p>
+           <p><strong>🧭 Lịch trình:</strong> Đà Nẵng - Hội An - Làng rau Trà Quế - Cù Lao Chàm - Đà Nẵng</p>
+           <p><strong>💰 Giá:</strong> <span class="tour-detail-price">2,500,000đ</span> / người</p>
          </div>
  
          <div class="tour-detail-description">
            <h3>📝 Giới thiệu chi tiết</h3>
            <p>
-             Trải nghiệm độc đáo tại "sa mạc thu nhỏ" với đồi cát đỏ rực rỡ, 
-             tắm biển thỏa thích, thưởng thức hải sản tươi ngon giá bình dân 
-             và thử thách với các môn thể thao biển lướt ván, dù kéo.
+             Khám phá phố cổ Hội An với những ngôi nhà vàng rực ánh đèn lồng, 
+             trải nghiệm làm nông dân tại làng rau Trà Quế, tắm biển Cửa Đại 
+             và thưởng thức đặc sản Cao lầu, Mì Quảng đúng điệu.
            </p>
          </div>
  
-         <div class="tour-detail-buttons">
-           <button class="btn btn-outline">Thêm vào giỏ hàng</button>
-         </div>
+          <div id="tour-data" data-id="3" data-name="Khám phá Hội An cổ kính 2 ngày" data-price="2500000" hidden></div>
+          <div id ="tour-detail-buttons">
+            <!-- JavaScript sẽ điền nội dung vào đây -->
+          </div>
        </div>
      </div>
  
      <div class="tour-detail-reviews">
        <h3>💬 Đánh giá từ khách hàng</h3>
        <div class="review-card">
-         <p class="review-text">"Đồi cát rất ấn tượng! Giá cả hợp lý, phù hợp cho chuyến đi ngắn ngày."</p>
-         <div class="review-author">– Đặng Thị Hương</div>
+         <p class="review-text">"Hội An về đêm đẹp không thể tả, ẩm thực tuyệt vời!"</p>
+         <div class="review-author">– Phạm Văn Đạt</div>
        </div>
      </div>
    </div>
@@ -144,5 +144,7 @@
      <p>&copy; 2025 VietnamExplorer. Tất cả quyền được bảo lưu.</p>
  </div>
  </footer>
+ <script src="../js/authservice.js"></script>
+ <script src="../js/services.js"></script>
 </body>
 </html>

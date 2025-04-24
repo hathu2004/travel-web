@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chi tiết Tour - Vịnh Hạ Long</title>
-  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="../mystyle.css">
   <link rel="icon" type="image/x-icon" href="/images/umbrella-beach-solid.svg">
 </head>
 <body>
@@ -56,7 +56,7 @@
 
     <div class="tour-detail-main">
       <div class="tour-detail-image">
-        <img src="images/halongbay1852.jpg" alt="Vịnh Hạ Long">
+        <img src="../images/halongbay1852.jpg" alt="Vịnh Hạ Long">
       </div>
 
       <div class="tour-detail-content">
@@ -76,8 +76,9 @@
           </p>
         </div>
 
-        <div class="tour-detail-buttons">
-          <button class="btn btn-outline">Thêm vào giỏ hàng</button>
+        <div id="tour-data" data-id="1" data-name="Du lịch Vịnh Hạ Long 3 ngày 2 đêm" data-price="3500000" hidden></div>
+        <div id ="tour-detail-buttons">
+          <!-- JavaScript sẽ điền nội dung vào đây -->
         </div>
       </div>
     </div>
@@ -148,6 +149,7 @@
      <p>&copy; 2025 VietnamExplorer. Tất cả quyền được bảo lưu.</p>
  </div>
  </footer>
- <script src="auth.js"></script>
+ <script src="../js/authservice.js"></script>
+ <script src="../js/services.js"></script>
 </body>
 </html>
