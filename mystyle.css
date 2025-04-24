@@ -186,7 +186,7 @@
 
  /* Hero Section */
  .hero {
-   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/anh-viet-nam-4.jpg');
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/canh-dep-40.jpg');
    background-size: cover;
    background-position: center;
    color: white;
@@ -198,7 +198,6 @@
    max-width: 800px;
    margin: 0 auto;
  }
-
  .hero h1 {
    font-size: 3rem;
    margin-bottom: 20px;
@@ -1174,6 +1173,277 @@
    color: #aaa;
  }
 
+ /* FAQ section */
+ .container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #616161;
+  padding-bottom: 30px;
+  font-size: 16px;
+}
+.faq-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/canh-dep-40.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 290px;
+  color: #ffffff;
+  font-size: 40px;
+  padding-top: 65px;
+  text-align: center;
+
+}
+
+/* FAQ header */
+.faq-header {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-top: -130px;
+}
+.faq-search {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.faq-search input {
+  width: 60%;
+  padding: 10px 16px 10px 40px; /* padding-left để icon không bị đè */
+  border: none;
+  border-radius: 999px; /* bo tròn full */
+  background-color: #f3f3f3;
+  font-size: 16px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  
+  background-image: url('images/loop.png');
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 12px center;
+
+  color: #202124;
+}
+
+.faq-search input::placeholder {
+  color: #5f6368;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 30px;
+}
+
+.filter-buttons button {
+  background: #f3f3f3;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  font-style: bold;
+  font-size: 15px;
+  color: #000000;
+}
+
+.filter-buttons button.active {
+  background: #1E88E5;
+  color: #fff;
+}
+
+.filter-buttons button:hover {
+  background: #1E88E5;
+  color: #ffffff;
+}
+
+
+/* FAQ Section */
+.faq-item {
+  border-top: 1px solid #1E88E5;
+  padding: 16px 0;
+  cursor: pointer;
+}
+
+.faq-question {
+  font-weight: 500;
+  display: flex;
+  font-size: 17px;
+  justify-content: space-between;
+}
+.faq-item.active{
+  transition: calc(2s);
+}
+
+
+.faq-answer {
+  color: #666;
+  font-size: 16px;
+  margin-top: 10px;
+  display: none;
+  
+}
+/* FAQ Answer Active */
+  .faq-item.active .faq-answer {
+      display: block;
+  }
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.contact-form, .contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background: #15445d;
+}
+.contact-form button:active {
+  background: #828282;
+  color: #000000;
+}
+
+/* Contact Info */
+.contact-info p, .contact-info a {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Testimonial */
+.testimonial {
+  background: #fafafa;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  flex: 1;
+  padding: 40px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.testimonial-image {
+  flex: 1;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Brand Logos */
+.brands {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.brands img {
+  max-height: 30px;
+  margin: 0 20px;
+  opacity: 0.6;
+}
+
+/* Footer */
+.footer {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column h4 {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer-column a {
+  display: block;
+  color: #555;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #000;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 12px;
+  color: #aaa;
+}
+/* btn */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;  
+}     
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #1976D2;
+}
+
  /* Responsive Styles */
  @media (max-width: 992px) {
    .about-content {
@@ -1268,4 +1538,81 @@
  .py-5 {
    padding-top: 50px;
    padding-bottom: 50px;
+ }
+ /* Careers */
+ .container-cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.card {
+  width: 300px;
+  border-radius: 10px 60px 30px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.info {
+  padding: 50px;
+}
+
+.info h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.info p {
+  margin: 0;
+  font-weight: bold;
+  color: #444;
+}
+.job {
+  padding: 16px 0;
+  cursor: pointer;
+}
+.job {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.job-info {
+  display: flex;
+  width: 100%;
+}
+
+.left {
+  flex: 1;
+  border-right: 1px solid #eee;
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+.right {
+  flex: 3;
+  padding-left: 20px;
+}
+.filter-buttons > button:hover {
+  transition: calc(0.2s);
+  transform: scale(1.02);
+}
+
+
+ html {
+   scroll-behavior: smooth;
  }
